@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>개인정보처리방침 — 크레 브리더 (Crestie)</title>
+    <meta name="robots" content="index,follow" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f7f5f0;
+        --fg: #1c1a17;
+        --muted: #5c574e;
+        --line: #d9d3c6;
+        --accent: #8a6d1f;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0d0f14;
+          --fg: #e8dcc0;
+          --muted: #9a9384;
+          --line: #2b3240;
+          --accent: #c9a227;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 32px 20px 80px;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.75 system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      main { max-width: 760px; margin: 0 auto; }
+      h1 { font-size: 24px; line-height: 1.35; margin: 0 0 4px; }
+      h1 + p.date { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
+      h2 { font-size: 17px; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+      ul { padding-left: 22px; }
+      li { margin: 4px 0; }
+      .tldr {
+        border: 1px solid var(--accent);
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin: 0 0 8px;
+        background: color-mix(in srgb, var(--accent) 10%, transparent);
+      }
+      .tldr p { margin: 0 0 6px; }
+      .tldr p:last-child { margin-bottom: 0; }
+      hr { margin: 56px 0 32px; border: 0; border-top: 1px solid var(--line); }
+      footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>개인정보처리방침 — 크레 브리더 (Crestie)</h1>
+      <p class="date">최종 갱신: 2026-10-06</p>
+
+      <div class="tldr">
+        <p><strong>이름·이메일·전화번호 같은 신원 정보는 받지 않습니다.</strong> 계정 가입과 로그인이 없습니다.</p>
+        <p>대신 게임이 서버에서 돌아가기 때문에, 기기마다 만든 <strong>무작위 식별값</strong>과 그에 묶인
+          <strong>게임 기록</strong>(개체·브리딩·마켓·재화·닉네임)이 개발자의 서버에 저장됩니다.</p>
+      </div>
+
+      <h2>1. 수집·저장하는 정보</h2>
+      <ul>
+        <li><strong>기기 식별값</strong> — 앱을 처음 열 때 기기 안에서 무작위로 만든 값(UUID)입니다. 기기 정보나
+          광고 식별자에서 만든 것이 아니며, 이 값으로 이용자 개인을 알아낼 수 없습니다. 게임 서버에 요청할 때마다
+          함께 보내 「누구의 사육장인지」를 가리는 데만 씁니다.</li>
+        <li><strong>게임 기록</strong> — 보유한 개체와 그 유전 정보·성장·사육 상태, 사육장 설정(온도·기물),
+          브리딩 기록과 혈통, 마켓 등록·거래 내역, 크리켓 코인·크레스트 젬 잔액과 증감 기록, 주간 순위 기록,
+          각 기록의 시각.</li>
+        <li><strong>닉네임</strong> — 현재 버전은 기본값(「브리더」)이 붙습니다. 순위표와 마켓에서 다른 이용자에게 보입니다.</li>
+        <li><strong>접속 정보</strong> — 인터넷 통신의 성질상 요청을 보낸 IP 주소가 서버에 전달됩니다. 게임 서버는 이를
+          게임 기록에 저장하지 않으며, 보안·장애 대응을 위한 접속 기록에 일시적으로 남을 수 있습니다.</li>
+      </ul>
+      <p>다음은 <strong>수집하지 않습니다</strong>: 이름·이메일·전화번호, 위치 정보, 연락처·사진·파일, 광고 식별자(AAID),
+        이용 분석·통계·크래시 리포트, 결제 정보.</p>
+
+      <h2>2. 쓰는 목적</h2>
+      <ul>
+        <li>사육장·개체·재화를 서버에 보관해 다시 접속했을 때 이어서 하게 하기</li>
+        <li>브리딩·성장 결과를 서버가 정해 조작을 막기</li>
+        <li>이용자 사이의 마켓 거래와 주간 순위 운영</li>
+      </ul>
+
+      <h2>3. 기기에 저장되는 것</h2>
+      <p>위 <strong>기기 식별값 하나</strong>를 앱 내부 저장소(localStorage)에 둡니다. 앱을 삭제하거나 앱 데이터를 지우면
+        이 값이 사라지고, 그 기기에서는 이전 사육장에 다시 연결할 수 없습니다(서버의 기록은 아래 5번에 따라 지울 수 있습니다).</p>
+
+      <h2>4. 보관 장소와 기간</h2>
+      <p>게임 기록은 개발자가 직접 운영하는 서버(<code>api.cashyalla.xyz</code>, 대한민국 소재)에 저장되며, 해외로 이전하지
+        않습니다. 서비스를 운영하는 동안 보관하고, 삭제를 요청하면 지체 없이 지웁니다. 서비스를 끝내면 모든 기록을 파기합니다.</p>
+
+      <h2>5. 삭제 요청</h2>
+      <p>게임 기록 삭제를 원하시면 아래 이메일로 요청해 주세요. 앱 안에 계정이 없으므로, 해당 사육장을 찾기 위해
+        닉네임·보유 개체 등 게임 안의 정보를 여쭐 수 있습니다. 확인되면 그 기기 식별값에 묶인 개체·거래·재화 기록을 삭제합니다.
+        다른 이용자에게 이미 판매한 개체는 구매자의 소유이므로 삭제 대상에서 빠집니다.</p>
+
+      <h2>6. 제3자 제공 · 외부 서비스</h2>
+      <p><strong>없습니다.</strong> 수집한 정보를 판매하거나 제3자에게 제공하지 않습니다. 광고 SDK, 분석 SDK, 소셜 로그인,
+        인앱 결제 SDK가 포함되어 있지 않습니다. 게임 서버 외에 다른 곳으로 데이터를 보내지 않습니다.</p>
+
+      <h2>7. 광고·결제</h2>
+      <p>이 버전에는 광고와 인앱 결제가 없습니다. 게임 안의 재화(코인·젬)는 게임 안에서만 얻고 쓰며 현금 가치가 없습니다.
+        앞으로 결제나 광고가 들어가면 이 방침을 고치고 앱 안에서 알립니다.</p>
+
+      <h2>8. 아동의 개인정보</h2>
+      <p>신원 정보를 받지 않으므로 연령을 확인하지 않습니다. 보호자가 자녀의 게임 기록 삭제를 원하시면 5번과 같이 요청해 주세요.</p>
+
+      <h2>9. 보안</h2>
+      <p>서버와의 통신은 HTTPS로 암호화합니다. 서버 접근은 개발자만 할 수 있습니다.</p>
+
+      <h2>10. 방침 변경</h2>
+      <p>내용이 바뀌면 최종 갱신일을 고치고, 수집 항목이 늘어나는 경우 앱 안에서 별도로 알립니다.</p>
+
+      <h2>11. 문의</h2>
+      <p>개인정보 관련 문의·삭제 요청: <a href="mailto:sonetfloor@gmail.com">sonetfloor@gmail.com</a></p>
+
+      <hr />
+
+      <h1>Privacy Policy — Crestie Breeder</h1>
+      <p class="date">Last updated: 2026-10-06</p>
+
+      <div class="tldr">
+        <p><strong>We do not collect your name, email, phone number, or any account.</strong> There is no sign-up or login.</p>
+        <p>Because the game runs on a server, a <strong>random per-device identifier</strong> and the <strong>game
+          records</strong> tied to it (geckos, breeding, market, currencies, nickname) are stored on the developer's server.</p>
+      </div>
+
+      <h2>1. What is stored</h2>
+      <ul>
+        <li><strong>Device identifier</strong> — a random UUID generated on your device the first time you open the app. It is
+          not derived from hardware or advertising IDs and cannot identify you. It is sent with each request to the game server
+          only to know whose terrarium it is.</li>
+        <li><strong>Game records</strong> — your geckos and their genetics, growth and care state, terrarium settings and props,
+          breeding history and lineage, market listings and trades, cricket-coin and crest-gem balances and their history,
+          weekly ranking results, and timestamps.</li>
+        <li><strong>Nickname</strong> — currently a default value. It is visible to other players in the ranking and market.</li>
+        <li><strong>Connection data</strong> — your IP address necessarily reaches the server with each request. The game does not
+          store it in game records; it may appear briefly in access logs kept for security and troubleshooting.</li>
+      </ul>
+      <p>We do <strong>not</strong> collect: name, email, phone, location, contacts, photos or files, advertising ID, analytics,
+        crash reports, or payment information.</p>
+
+      <h2>2. Where and how long</h2>
+      <p>Records are kept on a server operated by the developer (<code>api.cashyalla.xyz</code>, Republic of Korea) for as long as
+        the service runs, and deleted on request or when the service ends. Only the device identifier is kept on your device
+        (local storage); uninstalling the app removes it.</p>
+
+      <h2>3. Deletion</h2>
+      <p>Email us to have your game records deleted. Since there are no accounts, we may ask for in-game details (nickname, geckos
+        you own) to find your terrarium. Geckos already sold to other players belong to them and are not removed.</p>
+
+      <h2>4. Third parties</h2>
+      <p><strong>None.</strong> No data is sold or shared. No advertising SDKs, analytics SDKs, social login, or in-app purchase
+        SDKs. This version has no ads and no in-app purchases; in-game currencies have no cash value.</p>
+
+      <h2>5. Contact</h2>
+      <p><a href="mailto:sonetfloor@gmail.com">sonetfloor@gmail.com</a></p>
+
+      <footer>
+        크레 브리더 (Crestie) · xyz.cashyalla.crestie · 한국어 · English
+      </footer>
+    </main>
+  </body>
+</html>
